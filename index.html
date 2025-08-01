@@ -78,11 +78,25 @@
             display: none;
         }
 
-        #interaction-label {
+        /* UPDATED INTERACTION LABELS - TOP RIGHT */
+        .interaction-label {
             position: fixed;
-            left: 10%;
-            top: 0;
-            color: var(--offwhite);
+            right: 20px;
+            top: 20px;
+            color: white;
+            font-family: "Adobe Garamond Pro-Regular";
+            text-align: right;
+            opacity: 0.7;
+            line-height: 1.5;
+            pointer-events: none;
+        }
+
+        .interaction-label div {
+            transition: opacity 0.3s ease;
+        }
+
+        .interaction-label div:hover {
+            opacity: 1;
         }
 
         #hover {
@@ -300,5 +314,12 @@
         }
     };
 </script>
+
+<div class="interaction-label" id="interaction-label">
+  <div>[hover]</div>
+  <div>[complete the picture]</div>
+  <div>[click back to return to homepage]</div>
+
+</div>
 </body>
 </html>
